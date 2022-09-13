@@ -10,15 +10,26 @@
         <button>Celana</button>
     </div>
     <form>
-        <select>
+        <select id="product-name">
             <option value="">Kaos Polos</option>
             <option value="">Henley Tee Polos</option>
             <option value="">Baju Polo Polos</option>
         </select>
         <br>
-        <input type="text">
+
+        <input type="text" id="product-qty" style="border: 2px solid navy;">
         <br>
-        <input type="button" value="Buy">
+        <input type="button" style="background-color: navy; color: white" value="Buy" onclick="buy()">
+
+        <br>
+        <script>
+            function buy() {
+                let name = document.getElementById("product-name").value
+                let qty = document.getElementById("product-qty").value
+                alert(name * qty);
+            }
+        </script>
+
     </form>
 </body>
 </html>
